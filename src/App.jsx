@@ -2,6 +2,7 @@ import { useState } from "react";
 import Results from "./components/Results";
 import Header from "./components/Header";
 import UserInput from "./components/UserInput";
+import { use } from "react";
 
 function App() {
   // Stato per gestire i valori di input dell'utente con valori di default
@@ -26,8 +27,7 @@ function App() {
     <>
       <Header />
       <UserInput userInput={userInput} onChange={handleUserInput} />
-      {/* qui mettteremo i risultati  */}
-      <Results />
+      <Results input={userInput} />
     </>
   );
 }
