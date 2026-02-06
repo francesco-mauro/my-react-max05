@@ -6,8 +6,16 @@ export default function Results({ input }) {
   console.log(datiRisultato);
 
   return (
-    <div>
-      <div>Qui i riusltati</div>
-    </div>
+    <table id="result">
+      <thead>
+        <tr>
+          <th>Anno</th>
+          <th>Investimento Iniziale</th>
+          <th>Investimento Annuale</th>
+          <th>Ritorno di Investimento Atteso</th>
+          <th>Durata</th>
+        </tr>
+      </thead>
+    </table>
   );
 }
