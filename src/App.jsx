@@ -13,6 +13,8 @@ function App() {
     durata: 10,
   });
 
+  const inputIsValid = userInput.durata >= 1;
+
   // Funzione per aggiornare lo stato in base all'input dell'utente e all'id dell'input
   function handleUserInput(inputId, newValue) {
     setUserInput((prevUserValue) => {
@@ -27,7 +29,10 @@ function App() {
     <>
       <Header />
       <UserInput userInput={userInput} onChange={handleUserInput} />
-      <Results input={userInput} />
+      {!inputIsValid && (
+        <p className="center">Per piacere, inserire un adurata valida</p>
+      )}
+      {inputIsValid && <Results input={userInput} />}
     </>
   );
 }
